@@ -1,0 +1,421 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  /*  font-family: 'Gilroy';*/
+  font-family: PlayfairDisplay,serif-serif;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#loader{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: #F1ADB8;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    pointer-events: none;
+    transition: all ease 0.5s;
+}
+#loader img{
+    width: 105px;
+}
+#cursor{
+    height: 15px;
+    width: 15px;
+    background-color: #000000;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 999;
+    transition: all ease 0.7s;
+    cursor: none;
+}
+#nav{
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+}
+#nav .left-nav{
+    position: absolute;
+    left: -19%;
+    top: 8%;
+    height: 80px;
+    width: 250px;
+    font-size: 1.15vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 0.7s;
+}
+#nav .left-nav h3{
+    position: absolute;
+    font-family: gilroy;
+    font-weight: 300;
+    top: 64%;
+}
+#nav img{
+    position: absolute;
+    margin-top: 1.3%;
+    margin-left: 46%;
+    width: 105px;
+    transition: all ease 0.7s;
+}
+#nav #menu{
+    position: absolute;
+    right: 0;
+    top: 8%;
+    margin-right: 5%;
+    margin-top: 50px;
+    z-index: 99;
+}
+#menu .line{
+    height: 3px;
+    width: 38px;
+    background-color: #fff;
+    margin-top: 7px;
+}
+#menu #up{
+    height: 2px;
+}
+#main{
+    width: 100%;
+    background-color: #FFFAF0;
+}
+#page1{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+#page1 canvas{
+    min-height: 100vh;
+    min-width: 100vw;
+    position: absolute;
+    transition: all ease 0.8s;
+}
+#page1 #text{
+    position: absolute;
+    right: 0;
+    top: 35%;
+    margin-right: 8%;
+    color: #fff;
+    font-family: PlayfairDisplay,serif-serif;
+    transition: all ease 0.6s;
+}
+#text h1{
+    font-size: 4.8vw;
+    font-weight: 200;
+    line-height: 1;
+}
+#text h2{
+    font-size: 1.3vw;
+    text-align: center;
+    font-weight: 400;
+    margin-top: 30px;
+    margin-right: 15px;
+}
+#scroll p{
+    position: absolute;
+    right: 0;
+    color: #fff;
+    bottom: 20%;
+    margin-right: 3%;
+    rotate: -90deg;
+    font-weight: 600;
+}
+#page2{
+    height: 310vh;
+    width: 100%;
+    background-color: #FFFAF0;;
+    position: relative;
+}
+
+#page2 #top{
+    height: 90vh;
+    width: 100%;
+}
+#page2 #top img{
+    width: 1100px;
+    position: absolute;
+    left: 13%;
+    top: 7%;
+    z-index: 999;
+}
+#page2 #top h1{
+    position: absolute;
+    font-size: 5.5vw;
+    font-weight: 400;
+    line-height: 1;
+    text-align: center;
+    top: 15%;
+    left: 24%;
+    z-index: 8;
+}
+#page2 #top p{
+    position: absolute;
+    top: 37%;
+    left: 28%;
+    color: #999;
+    font-size: 1.6vw;
+    z-index: 9;
+}
+#page2 #middle{
+    height: 80vh;
+    width: 82%;
+    position: absolute;
+    top: 42%;
+    left: 1%;
+    margin-left: 6%;
+    font-size: 2.3vw;
+    line-height: 1;
+    letter-spacing:-1px ;
+    text-align: center;
+    color: #000000;
+    opacity: 1;
+}
+#page2 #middle h1 span{
+    font-weight: 100;
+}
+#page2 #btm{
+    height: 130vh;
+    width: 100%;
+    margin-top: 60px;
+    position: absolute;
+    top: 67%;
+    left: 5%;
+    opacity: 1;
+}
+#page2 #btm p{
+    position: absolute;
+    left: 34%;
+    font-size: 1.6vw;
+}
+#page2 #btm h1{
+    position: absolute;
+    color: #222;
+    font-size: 5vw;
+    font-weight: 100;
+    text-align: center;
+    top: 8%;
+    left: 3%;
+    width: 83%;
+    letter-spacing: -4px;
+}
+#page3{
+    height: 150vh;
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+}
+#page3 #down{
+    height: 120vh;
+    width: 100%;
+}
+#page3 #down img{
+    width: 1400px;
+    margin-top: 80px;
+    margin-left: 100px;
+    object-fit: cover;
+}
+#page3 #down h1{
+    font-size: 5.5vw;
+    font-weight: 300;
+    position: absolute;
+    left: 40%;
+    margin-top: 15%;
+}
+#page4{
+    min-height: 100vh;
+    min-width: 100vw;
+    position: relative;
+}
+#page4 #left-nav{
+    position: absolute;
+    left: -11%;
+    height: 80px;
+    width: 250px;
+    font-weight: 400;
+    font-size: 1.3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 0.9s;
+}
+#page4 canvas{
+    min-height: 100vh;
+    min-width: 100%;
+    position: absolute;
+    transition: all ease 0.6s;
+}
+#page4 #text-2{
+    opacity: 0;
+    transition: all ease 0.3s;
+}
+#page4 h1{
+    position: absolute;
+    font-size: 2.6vw;
+    font-family: PlayfairDisplay,serif-serif;
+    font-weight: 200;
+    color: #fff;
+    top: 40%;
+    left: 14%;
+    transition: all ease 0.3s;
+}
+
+#page5{
+    height: 200vh;
+    width: 100%;
+    position: relative;
+    background-color: #FFFAF0;
+}
+#page5 #top{
+    height: 90vh;
+    width: 100%;
+    position: relative;
+    margin-top: 10%;
+    margin-left: 5%;
+}
+#page5 #top p{
+    font-size: 1.4vw;
+    margin-bottom: 40px;
+}
+#page5 #top h1{
+    font-size: 4.8vw;
+    font-weight: 100;
+    letter-spacing: -4px;
+    line-height: 1;
+}
+#page5 #top h6{
+    font-family: gilroy;
+    font-weight: 400;
+    position: absolute;
+    left: 80%;
+    font-size: 1.3vw;
+    color: #F1ADB8;
+}
+#page5 #top h6 span{
+    font-family: gilroy;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #F1ADB8;
+}
+#page5 #bottom{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+#page5 #bottom #left{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    margin-left: 4%;
+    font-family: gilroy;
+}
+#page5 #bottom #left p{
+    font-size: 1.3vw;
+    margin-bottom: 30px;
+}
+#page5 #bottom #left h1{
+    font-size: 4.8vw;
+    font-weight: 100;
+    letter-spacing: -4px;
+    line-height: 1;
+}
+#page5 #bottom #left h6{
+    font-size: 1.3vw;
+    font-weight: 500;
+    font-family: gilroy;
+    margin-top: 90px;
+    color: #F1ADB8;
+}
+#page5 #bottom #left h6 span{
+    font-family: gilroy;
+    border-bottom: 3px solid #F1ADB8;
+    padding-bottom: 10px;
+}
+#page5 #bottom #left h5{
+    font-family: gilroy;
+    font-weight: 300;
+    margin-top: 39%;
+}
+#page5 #bottom #left img{
+    width: 100px;
+    position: absolute;
+    top: 82%;
+    left: 90%;
+}
+#page5 #bottom #right{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    margin-left: 6%;
+}
+#page5 #bottom #right p{
+    font-size: 1.2vw;
+    margin-bottom: 30px;
+    font-family: gilroy;
+}
+#page5 #bottom #right h1{
+    font-size: 1.3vw;
+    font-family: gilroy;
+    display: flex;
+    align-items: center;
+}
+#page5 #bottom #right h1 .line{
+    background-color: #F1ADB8;
+    height: 2px;
+    width: 160px;
+}
+#page5 #bottom #right h1 span{
+    position: absolute;
+    left: 65%;
+    top: 6.3%;
+    color: #F1ADB8;
+    font-family: gilroy;
+    font-weight: 400;
+    font-size: 1.2vw;
+}
+#page5 #bottom #right h2{
+    font-size: 1.2vw;
+    font-family: gilroy;
+    font-weight: 400;
+    margin-top: 35px;
+    margin-bottom: 70px;
+}
+#page5 #bottom #right h2 span{
+    position: absolute;
+    left: 45%;
+    top: 14%;
+    color: #F1ADB8;
+    line-height: 30px;
+    font-size: 1.3vw;
+}
+#page5 #bottom #right h3{
+    font-family: gilroy;
+    font-size: 1.2vw;
+    font-weight: 400;
+    margin-top: 40px;
+}
+#page5 #bottom #right h6{
+    font-size: 1.2vw;
+    color: #F1ADB8;
+    font-family: gilroy;
+    margin-top: 150px;
+}
+#page5 #bottom #right h6 span{
+    font-family: gilroy;
+    border-bottom: 3px solid #F1ADB8;
+    padding-bottom: 10px;
+}
+#page5 #bottom #right img{
+    width: 410px;
+    position: absolute;
+    top: 83%;
+    left: 40%;
+}
